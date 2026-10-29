@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#36594b" />
+    <meta name="author" content="godymat97" />
+    <title>时光归档 · 歪歪爱哦的博客</title>
+    <meta name="description" content="我双手烤着生命之火取暖。" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="时光归档" />
+    <meta property="og:description" content="我双手烤着生命之火取暖。" />
+    <meta
+      property="og:image"
+      content="https://waiwai-fieldnotes.funolive.chatgpt.site/assets/hero.jpg"
+    />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title="歪歪爱哦的博客" href="/feed.xml" />
+    <link rel="stylesheet" href="/style.css" />
+    <script>
+      try {
+        const t = localStorage.getItem("blog-theme");
+        document.documentElement.dataset.theme =
+          t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      } catch {}
+    </script>
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳转至正文</a>
+    <header class="site-header" id="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="/" aria-label="歪歪爱哦的博客首页"
+          ><span class="brand-mark" aria-hidden="true"
+            ><svg
+              class="icon"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 20 16 9M8 17c-3-10 6-15 11-12 4 6-2 14-11 12Zm4-4h6" /></svg></span
+          ><span>歪歪爱哦的博客<small>STILL A STORY TO TELL</small></span></a
+        >
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="/" class="">首页</a
+          ><a href="/archives/" class="active" aria-current="page">归档</a
+          ><a href="/tags/" class="">标签</a><a href="/about/" class="">关于</a>
+        </nav>
+        <div class="nav-tools">
+          <button class="icon-button search-trigger" aria-label="搜索文章" title="搜索文章">
+            <svg
+              class="icon"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="10.8" cy="10.8" r="6.8" />
+              <path d="m16 16 4.5 4.5" />
+            </svg></button
+          ><span class="tool-divider"></span
+          ><button class="icon-button theme-toggle" aria-label="切换深色模式" title="切换深色模式">
+            <span class="sun-icon"
+              ><svg
+                class="icon"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"
+                /></svg></span
+            ><span class="moon-icon"
+              ><svg
+                class="icon"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 13.3A8 8 0 0 1 10.7 4 8 8 0 1 0 20 13.3Z" /></svg
+            ></span></button
+          ><button
+            class="icon-button menu-toggle"
+            aria-label="展开导航"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+          >
+            <svg
+              class="icon"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="手机导航" hidden>
+        <a href="/">首页</a><a href="/archives/">归档</a><a href="/tags/">标签</a
+        ><a href="/about/">关于</a>
+      </nav>
+    </header>
+    <main id="main" class="inner-main">
+      <section class="page-hero">
+        <span class="eyebrow">EVERY STORY HAS A DATE</span>
+        <h1>时光归档<span class="heading-dot">.</span></h1>
+        <p>把零散的日子，串成一条慢慢向前的线。</p>
+      </section>
+      <div class="archive-wrap">
+        <div class="archive-year"><span>2026</span><small>6 篇示例记录</small></div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <time datetime="2026-10-18">10 / 18</time><span class="timeline-dot"></span
+            ><a class="timeline-content" href="/posts/hello-world/"
+              ><span class="category">技术手记</span>
+              <h2>从 Hello World 开始，搭建自己的数字花园</h2>
+              <p>
+                在信息不断流过的时代，给自己的想法一个固定的住址。从一篇文章开始，慢慢种下属于自己的数字花园。
+              </p>
+              <span class="timeline-read"
+                >2 分钟阅读
+                <svg
+                  class="icon"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span
+            ></a>
+          </article>
+          <article class="timeline-item">
+            <time datetime="2026-10-16">10 / 16</time><span class="timeline-dot"></span
+            ><a class="timeline-content" href="/posts/leave-some-space/"
+              ><span class="category">日常随笔</span>
+              <h2>给生活留一点空白</h2>
+              <p>
+                不必把每个下午都安排得满满当当。有时候，发一会儿呆，看看窗外，也是一件很好的事。
+              </p>
+              <span class="timeline-read"
+                >1 分钟阅读
+                <svg
+                  class="icon"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span
+            ></a>
+          </article>
+          <article class="timeline-item">
+            <time datetime="2026-10-12">10 / 12</time><span class="timeline-dot"></span
+            ><a class="timeline-content" href="/posts/mountains-and-lakes/"
+              ><span class="category">沿途风景</span>
+              <h2>去有山和湖的地方</h2>
+              <p>
+                如果给下一次出发选一个方向，希望那里有安静的湖面、很远的山，以及可以慢慢走的一条小路。
+              </p>
+              <span class="timeline-read"
+                >1 分钟阅读
+                <svg
+                  class="icon"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span
+            ></a>
+          </article>
+          <article class="timeline-item">
+            <time datetime="2026-10-08">10 / 08</time><span class="timeline-dot"></span
+            ><a class="timeline-content" href="/posts/simple-tools/"
+              ><span class="category">技术手记</span>
+              <h2>少一点工具，多一点专注</h2>
+              <p>
+                最好的工作流，也许只是一个随时能打开的编辑器，和一个愿意开始的自己。记录关于工具与专注的几个小想法。
+              </p>
+              <span class="timeline-read"
+                >1 分钟阅读
+                <svg
+                  class="icon"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span
+            ></a>
+          </article>
+          <article class="timeline-item">
+            <time datetime="2026-10-03">10 / 03</time><span class="timeline-dot"></span
+            ><a class="timeline-content" href="/posts/ordinary-moments/"
+              ><span class="category">日常随笔</span>
+              <h2>那些值得记下的小事</h2>
+              <p>
+                一次刚刚好的日落，一首循环播放的歌，一句突然被理解的话。普通的一天，也有自己的闪光时刻。
+              </p>
+              <span class="timeline-read"
+                >1 分钟阅读
+                <svg
+                  class="icon"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span
+            ></a>
+          </article>
+          <article class="timeline-item">
+            <time datetime="2026-09-27">09 / 27</time><span class="timeline-dot"></span
+            ><a class="timeline-content" href="/posts/walk-in-woods/"
+              ><span class="category">沿途风景</span>
+              <h2>在树影里，走一段慢路</h2>
+              <p>
+                把耳机摘下来，听风经过树叶。每一条通向自然的小路，都像是给忙碌生活的一次轻轻暂停。
+              </p>
+              <span class="timeline-read"
+                >1 分钟阅读
+                <svg
+                  class="icon"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span
+            ></a>
+          </article>
+        </div>
+        <p class="archive-end">每一篇，都是时间留下的小小坐标。</p>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a href="/" class="footer-brand"
+          ><svg
+            class="icon"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 20 16 9M8 17c-3-10 6-15 11-12 4 6-2 14-11 12Zm4-4h6" />
+          </svg>
+          歪歪爱哦的博客</a
+        >
+        <p>慢慢记录，慢慢生长。</p>
+        <div class="footer-bottom">
+          <span>© 2026 歪歪爱哦的博客<span class="footer-dot">·</span>用文字留住时间</span>
+          <div>
+            <a href="/about/">关于本站</a
+            ><a href="/feed.xml"
+              ><svg
+                class="icon"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="5" cy="19" r="1" />
+                <path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16" />
+              </svg>
+              RSS 订阅</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <button class="back-top icon-button" aria-label="返回顶部" title="返回顶部" hidden>
+      <svg
+        class="icon"
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 20V4m-6 6 6-6 6 6" />
+      </svg>
+    </button>
+    <dialog class="search-dialog" aria-labelledby="search-heading">
+      <div class="search-top">
+        <div>
+          <span class="eyebrow">FIND A LITTLE SOMETHING</span>
+          <h2 id="search-heading">找一篇记录</h2>
+        </div>
+        <button class="icon-button search-close" aria-label="关闭搜索">
+          <svg
+            class="icon"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m6 6 12 12M6 18 18 6" />
+          </svg>
+        </button>
+      </div>
+      <label class="search-input-wrap"
+        ><svg
+          class="icon"
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="10.8" cy="10.8" r="6.8" />
+          <path d="m16 16 4.5 4.5" /></svg
+        ><input
+          type="search"
+          id="search-input"
+          placeholder="搜索标题、标签或正文…"
+          autocomplete="off"
+          aria-label="搜索关键词"
+        /><kbd>ESC</kbd></label
+      >
+      <p class="search-count" aria-live="polite"></p>
+      <div class="search-results"></div>
+      <p class="search-hint">按 Esc 关闭 · 所有内容均为第一版示例</p>
+    </dialog>
+    <div class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#36594b" />
+    <meta name="author" content="godymat97" />
+    <title>少一点工具，多一点专注 · 歪歪爱哦的博客</title>
+    <meta
+      name="description"
+      content="最好的工作流，也许只是一个随时能打开的编辑器，和一个愿意开始的自己。记录关于工具与专注的几个小想法。"
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="少一点工具，多一点专注" />
+    <meta
+      property="og:description"
+      content="最好的工作流，也许只是一个随时能打开的编辑器，和一个愿意开始的自己。记录关于工具与专注的几个小想法。"
+    />
+    <meta
+      property="og:image"
+      content="https://waiwai-fieldnotes.funolive.chatgpt.site/assets/notes.svg"
+    />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title="歪歪爱哦的博客" href="/feed.xml" />
+    <link rel="stylesheet" href="/style.css" />
+    <script>
+      try {
+        const t = localStorage.getItem("blog-theme");
+        document.documentElement.dataset.theme =
+          t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      } catch {}
+    </script>
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳转至正文</a>
+    <header class="site-header" id="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="/" aria-label="歪歪爱哦的博客首页"
+          ><span class="brand-mark" aria-hidden="true"
+            ><svg
+              class="icon"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 20 16 9M8 17c-3-10 6-15 11-12 4 6-2 14-11 12Zm4-4h6" /></svg></span
+          ><span>歪歪爱哦的博客<small>STILL A STORY TO TELL</small></span></a
+        >
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="/" class="active" aria-current="page">首页</a
+          ><a href="/archives/" class="">归档</a><a href="/tags/" class="">标签</a
+          ><a href="/about/" class="">关于</a>
+        </nav>
+        <div class="nav-tools">
+          <button class="icon-button search-trigger" aria-label="搜索文章" title="搜索文章">
+            <svg
+              class="icon"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="10.8" cy="10.8" r="6.8" />
+              <path d="m16 16 4.5 4.5" />
+            </svg></button
+          ><span class="tool-divider"></span
+          ><button class="icon-button theme-toggle" aria-label="切换深色模式" title="切换深色模式">
+            <span class="sun-icon"
+              ><svg
+                class="icon"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"
+                /></svg></span
+            ><span class="moon-icon"
+              ><svg
+                class="icon"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 13.3A8 8 0 0 1 10.7 4 8 8 0 1 0 20 13.3Z" /></svg
+            ></span></button
+          ><button
+            class="icon-button menu-toggle"
+            aria-label="展开导航"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+          >
+            <svg
+              class="icon"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="手机导航" hidden>
+        <a href="/">首页</a><a href="/archives/">归档</a><a href="/tags/">标签</a
+        ><a href="/about/">关于</a>
+      </nav>
+    </header>
+    <main id="main" class="article-main">
+      <div class="article-cover">
+        <img
+          src="/assets/notes.svg"
+          alt="技术手记文章配图"
+          width="1800"
+          height="900"
+          fetchpriority="high"
+        />
+        <div class="article-cover-shade"></div>
+        <div class="article-title">
+          <a class="article-back" href="/#articles">← 返回全部记录</a
+          ><span class="eyebrow">CODE & IDEAS</span>
+          <h1>少一点工具，多一点专注</h1>
+          <div class="article-meta">
+            <time datetime="2026-10-08">2026.10.08</time><span>·</span
+            ><span
+              ><svg
+                class="icon"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="8.5" />
+                <path d="M12 7v5l3 2" /></svg
+              >1 分钟阅读</span
+            ><span>·</span
+            ><a href="/?category=%E6%8A%80%E6%9C%AF%E6%89%8B%E8%AE%B0#articles">技术手记</a>
+          </div>
+        </div>
+      </div>
+      <div class="article-layout">
+        <article class="article-content">
+          <div class="article-demo">
+            <svg
+              class="icon"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 20 16 9M8 17c-3-10 6-15 11-12 4 6-2 14-11 12Zm4-4h6" />
+            </svg>
+            示例文章 · 用于展示博客的阅读与排版效果
+          </div>
+          <p class="article-lead">
+            最好的工作流，也许只是一个随时能打开的编辑器，和一个愿意开始的自己。记录关于工具与专注的几个小想法。
+          </p>
+          <div class="prose">
+            <h2 id="section-1">工具是为了帮助开始</h2>
+            <p>
+              有时候，我们花在挑选工具上的时间，比真正使用工具的时间还长。比较功能、尝试插件、调整主题，这些事情很容易带来正在前进的错觉。
+            </p>
+            <p>一个实用的判断方法是：这个工具有没有减少我下一次开始时需要做的准备？</p>
+            <h2 id="section-2">给工作流减法</h2>
+            <p>
+              试着只保留三个入口：一个记录待办的地方，一个保存资料的地方，一个真正完成工作的地方。
+            </p>
+            <ul>
+              <li>待办只写下一步可以执行的动作。</li>
+              <li>资料用能再次找到的方式保存。</li>
+              <li>开始工作时，把暂时无关的窗口关掉。</li>
+            </ul>
+            <p>这些方法不复杂，难的是在工具已经够用时，愿意停下寻找。</p>
+            <h2 id="section-3">为真实的问题增加复杂度</h2>
+            <p>
+              当一个困难反复出现，再考虑引入新的工具。这样每一次调整都有具体的原因，也更容易判断是否有效。
+            </p>
+            <p>让工具跟着生活长出来，而不是让生活围着工具转。</p>
+          </div>
+          <div class="article-end">
+            <svg
+              class="icon"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 19c-3-11 4-14 14-14 0 10-3 17-14 14Zm0 0L15 9" /></svg
+            ><span>谢谢你读到这里。</span>
+          </div>
+          <div class="article-tools">
+            <div class="card-tags">
+              <a href="/tags/?tag=%E6%95%88%E7%8E%87"># 效率</a
+              ><a href="/tags/?tag=%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"># 学习笔记</a>
+            </div>
+            <button class="copy-link">
+              <svg
+                class="icon"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="m10 13 4-4M8 16l-1 1a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m2 1 1-1a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0"
+                  transform="translate(1 0)"
+                />
+              </svg>
+              复制文章链接
+            </button>
+          </div>
+          <a class="next-article" href="/posts/ordinary-moments/"
+            ><span class="eyebrow">ANOTHER LITTLE STORY</span>
+            <h2>那些值得记下的小事</h2>
+            <span
+              >继续阅读
+              <svg
+                class="icon"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14m-6-6 6 6-6 6" /></svg></span
+          ></a>
+        </article>
+        <aside class="article-sidebar">
+          <div class="toc">
+            <h2>这篇文章里</h2>
+            <nav aria-label="文章目录">
+              <a href="#section-1">工具是为了帮助开始</a><a href="#section-2">给工作流减法</a
+              ><a href="#section-3">为真实的问题增加复杂度</a>
+            </nav>
+            <a href="/#articles" class="toc-back">← 所有记录</a>
+          </div>
+        </aside>
+      </div>
+      <div class="reading-progress" aria-hidden="true"></div>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a href="/" class="footer-brand"
+          ><svg
+            class="icon"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 20 16 9M8 17c-3-10 6-15 11-12 4 6-2 14-11 12Zm4-4h6" />
+          </svg>
+          歪歪爱哦的博客</a
+        >
+        <p>慢慢记录，慢慢生长。</p>
+        <div class="footer-bottom">
+          <span>© 2026 歪歪爱哦的博客<span class="footer-dot">·</span>用文字留住时间</span>
+          <div>
+            <a href="/about/">关于本站</a
+            ><a href="/feed.xml"
+              ><svg
+                class="icon"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="5" cy="19" r="1" />
+                <path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16" />
+              </svg>
+              RSS 订阅</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <button class="back-top icon-button" aria-label="返回顶部" title="返回顶部" hidden>
+      <svg
+        class="icon"
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 20V4m-6 6 6-6 6 6" />
+      </svg>
+    </button>
+    <dialog class="search-dialog" aria-labelledby="search-heading">
+      <div class="search-top">
+        <div>
+          <span class="eyebrow">FIND A LITTLE SOMETHING</span>
+          <h2 id="search-heading">找一篇记录</h2>
+        </div>
+        <button class="icon-button search-close" aria-label="关闭搜索">
+          <svg
+            class="icon"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m6 6 12 12M6 18 18 6" />
+          </svg>
+        </button>
+      </div>
+      <label class="search-input-wrap"
+        ><svg
+          class="icon"
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="10.8" cy="10.8" r="6.8" />
+          <path d="m16 16 4.5 4.5" /></svg
+        ><input
+          type="search"
+          id="search-input"
+          placeholder="搜索标题、标签或正文…"
+          autocomplete="off"
+          aria-label="搜索关键词"
+        /><kbd>ESC</kbd></label
+      >
+      <p class="search-count" aria-live="polite"></p>
+      <div class="search-results"></div>
+      <p class="search-hint">按 Esc 关闭 · 所有内容均为第一版示例</p>
+    </dialog>
+    <div class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
