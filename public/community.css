@@ -1,0 +1,77 @@
+.view-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.view-count .icon { width: 13px; height: 13px; margin: 0; }
+.card-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  font-size: 9px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.timeline-read .view-count { margin-left: 10px; }
+.tag-post .view-count { margin-left: auto; color: var(--muted); font-size: 10px; }
+.tag-post .view-count + .icon { margin-left: 0; }
+.article-meta a[href="#comments"]:hover { text-decoration: underline; }
+.article-comments { margin-top: 42px; scroll-margin-top: 110px; }
+.comments-heading { margin-bottom: 22px; }
+.comments-heading h2 {
+  font: 600 25px/1.6 var(--serif);
+  letter-spacing: 1px;
+  margin: 3px 0 7px;
+}
+.comments-heading p, .comments-status, .comments-preview {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+.comments-status { padding: 20px 0; }
+.comments-preview {
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border-left: 2px solid var(--green);
+  background: var(--green-soft);
+}
+.comments-retry {
+  padding: 7px 14px;
+  margin-bottom: 16px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--green);
+  font-size: 12px;
+}
+/* Keep the client palette in sync with the site's existing theme switch. */
+#waline {
+  --waline-font-size: 14px;
+  --waline-theme-color: var(--green);
+  --waline-active-color: var(--green);
+  --waline-text-color: var(--ink);
+  --waline-bg-color: var(--paper);
+  --waline-bg-color-light: var(--page);
+  --waline-bg-color-hover: var(--green-soft);
+  --waline-border-color: var(--line);
+  --waline-info-color: var(--muted);
+  --waline-info-bg-color: var(--green-soft);
+  --waline-color: var(--ink);
+  --waline-light-grey: var(--muted);
+  --waline-dark-grey: var(--ink);
+  --waline-white: var(--paper);
+  --waline-badge-color: var(--green);
+  --waline-border: 1px solid var(--line);
+  --waline-box-shadow: none;
+  --waline-border-radius: 6px;
+  overflow-wrap: anywhere;
+}
+#waline .wl-editor { font-family: var(--sans); }
+#waline .wl-btn.primary { color: var(--paper); }
+@media (max-width: 600px) {
+  .article-comments { margin-top: 32px; }
+  .comments-heading h2 { font-size: 23px; }
+  .tag-post .view-count { margin: 0 30px 0 0; }
+}

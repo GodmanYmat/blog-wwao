@@ -18,7 +18,6 @@ export function renderHomeReel({ posts, config, icon, esc }) {
                   <a class="button button-light" href="#articles">${icon('book')} 开始阅读 ${icon('down')}</a>
                   <a class="button button-ghost" href="/about/">关于这里 ${icon('arrow')}</a>
                 </div>
-                <div class="hero-note"><span class="status-dot"></span> 保持好奇，保持记录。</div>
               </div>
             </section>
             ${latest

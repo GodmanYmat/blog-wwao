@@ -66,7 +66,8 @@
 
     const position = Math.round(viewport.scrollLeft / width) - offset;
     const index = ((position % slides.length) + slides.length) % slides.length;
-    progressBar.style.transform = `scaleX(${slides.length > 1 ? index / (slides.length - 1) : 0})`;
+    const progress = slides.length > 1 ? Math.max(0, Math.min(1, (viewport.scrollLeft / width - offset) / (slides.length - 1))) : 0;
+    progressBar.style.transform = `scaleX(${progress})`;
     if (index === active) return;
 
     if (active >= 0 && slides[active].contains(document.activeElement)) {
@@ -92,6 +93,7 @@
 
   const settle = () => {
     clearTimeout(settleTimer);
+    if (window.blogMotion.isAnimating(viewport)) return;
     if (offset) {
       const position = Math.round(viewport.scrollLeft / width);
       // The matching real page looks identical, so this reset is invisible.
@@ -105,14 +107,19 @@
   const goTo = (index, manual = true) => {
     settle();
     status.setAttribute('aria-live', manual ? 'polite' : 'off');
-    viewport.scrollTo({
+    window.blogMotion.scroll(viewport, {
       left: (index + offset) * width,
-      behavior: reducedMotion.matches ? 'instant' : 'smooth',
+      duration: 900,
+      onComplete: ({cancelled}) => {
+        if (!cancelled) settle();
+        restartAutoplay();
+      },
     });
     restartAutoplay();
   };
 
   const configure = () => {
+    window.blogMotion.cancel(viewport);
     clearTimeout(settleTimer);
     width = Math.max(1, viewport.clientWidth);
     viewport.scrollTo({ left: (Math.max(0, active) + offset) * width, behavior: 'instant' });

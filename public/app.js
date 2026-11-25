@@ -5,7 +5,9 @@
   const backTop = $('.back-top');
   const progress = $('.reading-progress');
   const homeReel = $('[data-reel]');
+  let scrollFrame = 0;
   const onScroll = () => {
+    scrollFrame = 0;
     // Keep non-overlay headers in flow to avoid a layout jump on inner pages.
     if (header.classList.contains('over-hero')) {
       const overReel = homeReel && homeReel.getBoundingClientRect().bottom > header.offsetHeight;
@@ -15,12 +17,44 @@
     backTop.hidden = scrollY < 500;
     if (progress) {
       const max = document.documentElement.scrollHeight - innerHeight;
-      progress.style.width = `${max > 0 ? Math.min(100, scrollY / max * 100) : 0}%`;
+      progress.style.transform = `scaleX(${max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0})`;
     }
   };
-  addEventListener('scroll', onScroll, {passive:true});
+  const scheduleScroll = () => {
+    if (!scrollFrame) scrollFrame = requestAnimationFrame(onScroll);
+  };
+  addEventListener('scroll', scheduleScroll, {passive:true});
+  addEventListener('resize', scheduleScroll, {passive:true});
   onScroll();
-  backTop.addEventListener('click', () => scrollTo({top:0, behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));
+  backTop.addEventListener('click', () => window.blogMotion.scroll(window, {top:0}));
+
+  document.addEventListener('click', event => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const anchor = event.target.closest('a[href]');
+    if (!anchor || anchor.hasAttribute('download') || (anchor.target && anchor.target !== '_self')) return;
+    const url = new URL(anchor.href, location.href);
+    if (url.origin !== location.origin || url.pathname !== location.pathname || url.search !== location.search || !url.hash) return;
+    let id;
+    try { id = decodeURIComponent(url.hash.slice(1)); } catch { return; }
+    const target = document.getElementById(id);
+    if (!target) return;
+    event.preventDefault();
+    const margin = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+    const gap = anchor.classList.contains('skip-link') ? 0 : Math.max(header.offsetHeight + 16, margin);
+    const top = target.getBoundingClientRect().top + scrollY - gap;
+    if (location.hash !== url.hash) history.pushState(null, '', url.href);
+    window.blogMotion.scroll(window, {
+      top,
+      ...(anchor.classList.contains('skip-link') ? {duration:0} : {}),
+      onComplete: ({cancelled}) => {
+        if (cancelled) return;
+        const temporaryTabIndex = !target.hasAttribute('tabindex');
+        if (temporaryTabIndex) target.setAttribute('tabindex', '-1');
+        target.focus({preventScroll:true});
+        if (temporaryTabIndex) target.removeAttribute('tabindex');
+      },
+    });
+  });
   $('.theme-toggle').addEventListener('click', () => {
     const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
     document.documentElement.dataset.theme = next;

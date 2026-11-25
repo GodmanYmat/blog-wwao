@@ -11,13 +11,16 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="分类与标签" />
     <meta property="og:description" content="我双手烤着生命之火取暖。" />
-    <meta
-      property="og:image"
-      content="https://waiwai-fieldnotes.funolive.chatgpt.site/assets/hero.jpg"
-    />
+    <meta property="og:image" content="https://blog-wwao.godymat97.workers.dev/assets/hero.jpg" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <link rel="alternate" type="application/rss+xml" title="歪歪爱哦的博客" href="/feed.xml" />
     <link rel="stylesheet" href="/style.css" />
+    <meta
+      name="waline-server-url"
+      content="https://review-setting.netlify.app/.netlify/functions/comment"
+    />
+    <script type="module" src="/community.js"></script>
+    <link rel="stylesheet" href="/community.css" />
     <script>
       try {
         const t = localStorage.getItem("blog-theme");
@@ -25,6 +28,7 @@
           t || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
       } catch {}
     </script>
+    <script src="/motion.js" defer></script>
     <script src="/app.js" defer></script>
   </head>
   <body>
@@ -251,7 +255,22 @@
             <a class="tag-post" href="/posts/hello-world/" data-tags='["博客","折腾记录"]'
               ><time>2026.10.18</time>
               <h3>从 Hello World 开始，搭建自己的数字花园</h3>
-              <svg
+              <span class="view-count"
+                ><svg
+                  class="icon"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" />
+                  <circle cx="12" cy="12" r="3" /></svg
+                ><span class="waline-pageview-count" data-path="/posts/hello-world/">—</span>
+                次浏览</span
+              ><svg
                 class="icon"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
@@ -265,7 +284,22 @@
             ><a class="tag-post" href="/posts/leave-some-space/" data-tags='["生活","随想"]'
               ><time>2026.10.16</time>
               <h3>给生活留一点空白</h3>
-              <svg
+              <span class="view-count"
+                ><svg
+                  class="icon"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" />
+                  <circle cx="12" cy="12" r="3" /></svg
+                ><span class="waline-pageview-count" data-path="/posts/leave-some-space/">—</span>
+                次浏览</span
+              ><svg
                 class="icon"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
@@ -279,7 +313,24 @@
             ><a class="tag-post" href="/posts/mountains-and-lakes/" data-tags='["自然","旅行灵感"]'
               ><time>2026.10.12</time>
               <h3>去有山和湖的地方</h3>
-              <svg
+              <span class="view-count"
+                ><svg
+                  class="icon"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" />
+                  <circle cx="12" cy="12" r="3" /></svg
+                ><span class="waline-pageview-count" data-path="/posts/mountains-and-lakes/"
+                  >—</span
+                >
+                次浏览</span
+              ><svg
                 class="icon"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
@@ -293,7 +344,22 @@
             ><a class="tag-post" href="/posts/simple-tools/" data-tags='["效率","学习笔记"]'
               ><time>2026.10.08</time>
               <h3>少一点工具，多一点专注</h3>
-              <svg
+              <span class="view-count"
+                ><svg
+                  class="icon"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" />
+                  <circle cx="12" cy="12" r="3" /></svg
+                ><span class="waline-pageview-count" data-path="/posts/simple-tools/">—</span>
+                次浏览</span
+              ><svg
                 class="icon"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
@@ -307,7 +373,22 @@
             ><a class="tag-post" href="/posts/ordinary-moments/" data-tags='["生活","记录"]'
               ><time>2026.10.03</time>
               <h3>那些值得记下的小事</h3>
-              <svg
+              <span class="view-count"
+                ><svg
+                  class="icon"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" />
+                  <circle cx="12" cy="12" r="3" /></svg
+                ><span class="waline-pageview-count" data-path="/posts/ordinary-moments/">—</span>
+                次浏览</span
+              ><svg
                 class="icon"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
@@ -321,7 +402,22 @@
             ><a class="tag-post" href="/posts/walk-in-woods/" data-tags='["自然","散步"]'
               ><time>2026.09.27</time>
               <h3>在树影里，走一段慢路</h3>
-              <svg
+              <span class="view-count"
+                ><svg
+                  class="icon"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" />
+                  <circle cx="12" cy="12" r="3" /></svg
+                ><span class="waline-pageview-count" data-path="/posts/walk-in-woods/">—</span>
+                次浏览</span
+              ><svg
                 class="icon"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
@@ -437,7 +533,7 @@
       >
       <p class="search-count" aria-live="polite"></p>
       <div class="search-results"></div>
-      <p class="search-hint">按 Esc 关闭 · 所有内容均为第一版示例</p>
+      <p class="search-hint">按 Esc 关闭</p>
     </dialog>
     <div class="toast" role="status" aria-live="polite"></div>
   </body>
