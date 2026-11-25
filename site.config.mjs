@@ -5,7 +5,7 @@ export default {
   description: '我双手烤着生命之火取暖。',
   author: 'godymat97',
   origin: 'https://blog-wwao.godymat97.workers.dev',
-  intro: '欢迎来到我的小小角落。这里收藏日常的片段、学习的笔记，和偶尔冒出来的想法。',
+  intro: '记录生活的酸甜苦辣，留下时间的雪泥鸿爪。',
   email: 'godymat97@outlook.com',
   github: 'https://github.com/GodmanYmat',
   demo: true,
